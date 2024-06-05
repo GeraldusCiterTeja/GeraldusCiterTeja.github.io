@@ -1,0 +1,388 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Caveat", cursive , sans-serif;
+}
+
+/* header */
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid black;
+    background-color: #344C64;
+}
+
+header .logo{
+    display: flex;
+    gap: 1rem;
+}
+
+header .logo img{
+    width: 40px;
+    border-radius: 100px;
+}
+
+/* setting */
+ul{
+    display: flex;
+    gap: 1rem;
+}
+
+li{
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+li a:hover{
+    color: #fff;
+}
+
+/* setting font */
+h1, h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1.2rem;
+    font-family: sans-serif, Verdana;
+}
+
+/* setting body */
+
+html{
+    background-color: #F6F5F5;
+    scroll-behavior: smooth;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 0;
+}
+
+article, aside{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* home */
+.home{
+    padding: 4rem 0 9rem;
+    gap: 5rem;
+}
+
+.home img{
+    width: 100%;
+    height: 15rem;
+}
+
+.home h2{
+    font-size: 3rem;
+}
+
+/* about */
+.about{
+    padding-bottom: 10rem;
+    gap: 4rem;
+}
+
+.about img{
+    width: 300px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+
+}
+
+.about .content{
+    flex-direction: row;
+}
+
+.about aside{
+    width: 30%;
+}
+
+.about article{
+    width: 70%;
+    text-align: left;
+}
+
+/* project */
+.project{
+    /* background-color: #f1a204; */
+    padding-bottom: 10rem;
+    gap: 2rem;
+}
+
+.project img{
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Certificate */
+.certificate{
+    padding-bottom: 10rem;
+    gap: 1rem;
+}
+
+.certificate .content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.certificate-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.certificate-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.certificate-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* skills */
+.skills{
+    padding-bottom: 10rem;
+    gap: 2rem;
+}
+
+.skills .content{
+    gap: 2rem;
+}
+
+.skills article{
+    justify-content: left;
+    align-items: none;
+    text-align: left;
+    width: 50%;
+}
+
+.skills aside img{
+    width: 400px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.skills .article2{
+    display: flex;
+    flex-direction: row;
+}
+
+.skills aside p{
+    text-align: left;
+}
+
+/* contact */
+.contact{
+    gap: 1rem;
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+}
+
+.contact .content{
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact aside{
+    gap: 1rem;
+}
+
+.myContact{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    background-color: #ccc;
+    border: 2px solid black;
+    padding: 1rem 2rem;
+    width: 20rem;
+    border-radius: 1.5rem 3rem;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+form button:hover {
+    background-color: #344C64;
+}
+
+.contact ul{
+    gap: 3rem;
+    justify-content: center;
+}
+
+.contact li{
+    align-items: center;    
+}
+
+.contact li a{
+    font-size: 2rem;
+}
+
+.contact article{
+    gap: 1rem;
+}
+
+/* footer */
+footer{
+    border-top: 1px solid black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: #344C64;
+    padding: 1rem 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 5rem;
+}
+
+footer .content{
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+footer aside{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 1rem;
+}
+
+footer ul{
+    display: flex;
+    justify-content: right;
+    gap: 2rem;
+}
+
+footer p i, #ig{
+    color: red;
+}
+
+footer li i{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 0.4rem 0.6rem;
+    
+}
+
+footer a{
+    font-size: 2rem;
+    background-color: #f1a204;
+    padding: 0.5rem 0;
+    border-radius: 10px;
+}
+
+#ig{
+    color: #fff;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+#ig:hover{
+    background:  linear-gradient(45deg, #ff8401 0%, #ff4400 25%, #ff0228 50%, #ff0267 75%, #f300a6 100%);
+}
+
+#fb, #tele, #linkedin{
+    color: blue;
+    background-color: #F6F5F5;
+}
+
+#fb:hover, #tele:hover, #linkedin:hover{
+    background-color: #fff;
+}
+
+#email{
+    color: #C40C0C;
+    background-color: #F6F5F5;
+}
+
+#email:hover{
+    background-color: #Fff;
+}
+
+#tt, #twiter, #gitHub{
+    color: #fff;
+    background-color: rgb(28, 27, 27);
+}
+
+#tt:hover, #twiter:hover, #gitHub:hover{
+    background-color: black;
+}
+
+#wa, #phone{
+    color: white;
+    background-color: green;
+} 
+
+#wa:hover, #phone:hover{
+    background-color: rgb(72, 232, 72);
+}
