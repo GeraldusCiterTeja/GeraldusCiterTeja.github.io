@@ -31,6 +31,11 @@ header .logo img{
     border-radius: 100px;
 }
 
+header .navList{
+    font-size: 2rem;
+    display: none;
+}
+
 /* setting */
 ul{
     display: flex;
@@ -91,6 +96,7 @@ article, aside{
 
 .content{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -114,37 +120,40 @@ article, aside{
 .about{
     padding-bottom: 10rem;
     gap: 4rem;
+    /* width: 100%; */
 }
 
 .about img{
-    width: 300px;
+    width: 100%;
+    max-width: 400px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 
 }
 
 .about .content{
-    flex-direction: row;
+    gap: 2rem;
+    justify-content: left;
+    align-items: left;
 }
 
 .about aside{
-    width: 30%;
+    /* width: 30%; */
 }
 
 .about article{
-    width: 70%;
-    text-align: left;
+    /* width: 70%; */
+    /* text-align: left; */
 }
 
 /* project */
 .project{
-    /* background-color: #f1a204; */
     padding-bottom: 10rem;
     gap: 2rem;
 }
 
 .project img{
     width: 100%;
-    max-width: 700px;
+    max-width: 400px;
 }
 
 /* Certificate */
@@ -257,6 +266,7 @@ form input, form textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
+    font-family: sans-serif, Verdana, Tahoma;
 }
 
 
@@ -305,10 +315,29 @@ footer{
 }
 
 footer .content{
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     width: 50%;
+    flex-direction: column;
+    gap: 3rem;
 }
+
+footer section{
+    font-size: 1rem;
+    display: flex;
+    text-align: left;
+    gap: 0.3rem;
+    padding: 0rem;
+}
+
+footer section p{
+    font-size: 1rem;
+    /* text-align: left; */
+}
+
+/* footer section h3{
+
+} */
 
 footer aside{
     width: 50%;
@@ -385,4 +414,25 @@ footer a{
 
 #wa:hover, #phone:hover{
     background-color: rgb(72, 232, 72);
+}
+
+/* Media */
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 75%;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    nav .navList{
+        display: flex;
+    }
+
+    nav .navList:hover{
+        color: #fff;
+    }
+
+    
 }
