@@ -72,7 +72,7 @@ h3{
 
 p{
     font-size: 1.2rem;
-    font-family: sans-serif, Verdana;
+    font-family: Verdana, sans-serif;
 }
 
 /* setting body */
@@ -141,7 +141,7 @@ article, aside{
 
 .about article{
     width: 70%;
-    text-align: justify;
+    text-align: left;
     justify-content: right;
 
 }
@@ -150,6 +150,10 @@ article, aside{
 .project{
     padding-bottom: 10rem;
     gap: 2rem;
+}
+
+.project .content{
+    gap: 1.5rem;
 }
 
 .project img{
@@ -228,7 +232,7 @@ article, aside{
 .skills article{
     justify-content: left;
     align-items: none;
-    text-align: justify;
+    text-align: left;
     width: 60%;
 }
 
@@ -304,6 +308,7 @@ form button {
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid black;
+    font-size: 1.4rem;
 }
 
 form button:hover {
