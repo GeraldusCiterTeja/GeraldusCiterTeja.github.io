@@ -11,10 +11,7 @@ html{
 
 /* header */
 header{
-    display: flex;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
     padding: 0.8rem 2rem;
     position: fixed;
     z-index: 999;
@@ -24,18 +21,13 @@ header{
     border-bottom: 1px solid black;
     background-color: #344C64;
 }
-
-header .logo{
+nav{
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header .logo img{
-    width: 40px;
-    border-radius: 100px;
-}
-
-header .navList{
+nav .navList{
     font-size: 2rem;
     display: none;
 }
@@ -89,7 +81,7 @@ section{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 8rem 2rem 0;
+    padding: 8rem 8rem 0;
 }
 
 article, aside{
@@ -109,14 +101,18 @@ article, aside{
 
 /* home */
 .home{
-    padding: 4rem 0 9rem;
+    padding: 9rem 0 9rem;
     gap: 5rem;
+    margin-top: 2rem;
 }
 
-.home img{
-    width: 100%;
-    height: 15rem;
+.background-image{
+    background-image: url(../img/icons.jpg);
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    height: 90vh;
+    margin-top: -28.3rem;
+    background-size: cover;
 }
 
 .home h2{
@@ -130,7 +126,7 @@ article, aside{
 }
 
 .about .content{
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .about aside img{
@@ -140,7 +136,7 @@ article, aside{
 }
 
 .about article{
-    width: 70%;
+    width: 50%;
     text-align: left;
     justify-content: right;
 
@@ -287,8 +283,7 @@ article, aside{
     font-weight: bold;
 }
 
-
-form input, form textarea {
+form input, form textarea{
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -341,40 +336,34 @@ footer{
     display: flex;
     width: 100%;
     justify-content: center;
-    gap: 5rem;
 }
 
 footer .content{
-    /* justify-content: center; */
-    /* align-items: center; */
     width: 50%;
     flex-direction: column;
     gap: 3rem;
 }
 
+footer .content h4{
+    font-size: 1.2rem;
+}
+
 footer section{
-    font-size: 1rem;
     display: flex;
-    text-align: left;
     gap: 0.3rem;
     padding: 0rem;
 }
 
 footer section p{
     font-size: 1rem;
-    /* text-align: left; */
 }
-
-/* footer section h3{
-
-} */
 
 footer aside{
     width: 50%;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 }
 
 footer ul{
@@ -383,7 +372,8 @@ footer ul{
     gap: 2rem;
 }
 
-footer p i, #ig{
+footer h4 i{
+    font-size: 1.2rem;
     color: red;
 }
 
@@ -395,32 +385,31 @@ footer li i{
 }
 
 footer a{
-    font-size: 2rem;
     background-color: #f1a204;
     padding: 0.5rem 0;
     border-radius: 10px;
 }
 
-#ig{
+#instagram{
     color: #fff;
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
-#ig:hover{
+#instagram:hover{
     background:  linear-gradient(45deg, #ff8401 0%, #ff4400 25%, #ff0228 50%, #ff0267 75%, #f300a6 100%);
 }
 
-#fb, #tele, #linkedin{
+#facebook, #telegram, #linkedin{
     color: blue;
     background-color: #F6F5F5;
 }
 
-#fb:hover, #tele:hover, #linkedin:hover{
+#facebook:hover, #telegram:hover, #linkedin:hover{
     background-color: #fff;
 }
 
 #email{
-    color: #C40C0C;
+    color: #b10000;
     background-color: #F6F5F5;
 }
 
@@ -428,46 +417,206 @@ footer a{
     background-color: #Fff;
 }
 
-#tt, #twiter, #gitHub{
+#tiktok, #twitter, #gitHub{
     color: #fff;
     background-color: rgb(28, 27, 27);
 }
 
-#tt:hover, #twiter:hover, #gitHub:hover{
+#tiktok:hover, #twitter:hover, #gitHub:hover{
     background-color: black;
 }
 
-#wa, #phone{
+#whatsapp, #phone{
     color: white;
     background-color: green;
 } 
 
-#wa:hover, #phone:hover{
+#whatsapp:hover, #phone:hover{
     background-color: rgb(72, 232, 72);
 }
 
 /* Media */
 @media screen and (max-width: 768px) {
-    html{
-        font-size: 75%;
-    }
-
     aside img{
         width: 100%;
         max-width: 300px;
     }
 
-    nav ul{
+    .hidden{
         display: none;
+        opacity: 0;
+    }
+
+    nav ul{
+        position:absolute;
+        width: 100%;
+        left: 0;
+        margin-top: 19.5rem;
+        padding-bottom: 1rem;
+        align-items: center;
+        flex-direction: column;
+        background-color: #F0EBE3;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
     }
 
     nav .navList{
         display: flex;
+        justify-content: end;
     }
 
     nav .navList:hover{
         color: #fff;
+    }    
+
+    nav li a{
+        font-size: 1.2rem;
+        /* position: absolute; */
+        /* transition: transform 0.5s; */
+        /* color: #b10000; */
     }
 
-    
+    nav li:hover a{
+
+    }
+
+    nav li a:hover{
+        /* transform: translateX(1.4rem); */
+        color: #b10000;
+        font-size: 1.3rem;
+        /* position: absolute; */
+
+    }
+
+    /* home */
+
+    .about article{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .about article p{
+        font-size: 1rem;
+    }
+
+    /* skills */
+    .skills article{
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    .skills article p{
+        font-size: 1rem;
+    }
+
+    /* contact */
+    .contact article{
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contact article p{
+        font-size: 1rem;
+    }
+
+    .contact form{
+        width: 18rem;
+        padding: 0.8rem 1rem;
+        gap: 0.3rem;
+    }
+
+    form input, form textarea{
+        font-size: 0.8rem;
+    }
+
+    form button{
+        font-size: 1rem;
+    }
+
+    /* footer */
+    footer{
+        padding: 0.2rem 2rem;
+        gap: 5rem;
+    }
+
+    footer section p{
+        font-size: 0.8rem;
+    }
+
+    footer aside{
+        gap: 1.5rem;
+    }
+
+    footer ul{
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    section{
+        padding: 1rem 3rem;
+    }
+
+    .background-image{
+        height: 60vh;
+    }
+
+    nav ul{
+        padding-top: 1rem;
+        margin-top: 20.5rem;
+    }
+
+    .home{
+        padding-bottom: 1rem;
+    }
+
+    .about{
+        padding-top: 5rem;
+        gap: 1rem;
+    }
+
+    .about article{
+        width: 100%;
+    }
+
+    .about article p{
+        font-size: 1rem;
+    }
+
+    .project{
+        padding-top: 5rem;
+    }
+
+    .certificate{
+        padding-top: 5rem;
+    }
+
+    .skills{
+        padding-top: 5rem;
+    }
+
+    .contact{
+        padding-top: 5rem;
+    }
+
+    footer{
+        flex-wrap: wrap;
+        padding: 1rem 0;
+    }
+
+    footer .content{
+        width: 100%;
+        gap: 1rem;
+        margin-bottom: 0;
+    }
+
+    footer aside{
+        margin-top: 0;
+        width: 100%;
+        padding-bottom: 1rem;
+    }
 }

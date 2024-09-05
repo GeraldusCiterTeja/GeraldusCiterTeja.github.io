@@ -48,3 +48,12 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(certificate);
     });
 });
+
+// Drop down
+
+const listIcons = document.getElementById('navList');
+const menuList = document.getElementById('menu-list')
+
+listIcons.addEventListener("click", () => {
+    menuList.classList.toggle('hidden')
+})
