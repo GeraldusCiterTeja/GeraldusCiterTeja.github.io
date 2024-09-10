@@ -49,11 +49,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Drop down
+// Hamburger Menu
 
 const listIcons = document.getElementById('navList');
 const menuList = document.getElementById('menu-list')
 
-listIcons.addEventListener("click", () => {
+listIcons.addEventListener("click", (e) => {
     menuList.classList.toggle('hidden')
+    e.stopPropagation();
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", ()=>{
+    menuList.classList.add('hidden');
+}))
+
+document.addEventListener('click', (e) => {
+    if(!menuList.contains(e.target) && !listIcons.contains(e.target)){
+        menuList.classList.add('hidden')
+    }
 })

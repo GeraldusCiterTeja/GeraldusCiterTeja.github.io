@@ -30,6 +30,15 @@ nav{
 nav .navList{
     font-size: 2rem;
     display: none;
+    cursor: pointer;
+}
+
+.nav-link{
+    transition: 0.7s ease;
+}
+
+.nav-link:hover{
+    color: #fff;
 }
 
 /* setting */
@@ -47,10 +56,7 @@ li a{
     font-size: 1.2rem;
     font-weight: bold;
     color: black;
-}
-
-li a:hover{
-    color: #fff;
+    cursor: pointer;
 }
 
 /* setting font */
@@ -375,6 +381,7 @@ footer ul{
 footer h4 i{
     font-size: 1.2rem;
     color: red;
+    margin-left: 0.5rem;
 }
 
 footer li i{
@@ -444,10 +451,9 @@ footer a{
 
     .hidden{
         display: none;
-        opacity: 0;
     }
 
-    nav ul{
+    #menu-list{
         position:absolute;
         width: 100%;
         left: 0;
@@ -456,13 +462,11 @@ footer a{
         align-items: center;
         flex-direction: column;
         background-color: #F0EBE3;
-        opacity: 1;
-        transition: opacity 0.3s ease;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
     }
 
     nav .navList{
-        display: flex;
+        display: block;
         justify-content: end;
     }
 
@@ -472,21 +476,14 @@ footer a{
 
     nav li a{
         font-size: 1.2rem;
-        /* position: absolute; */
-        /* transition: transform 0.5s; */
-        /* color: #b10000; */
     }
 
-    nav li:hover a{
-
-    }
-
-    nav li a:hover{
-        /* transform: translateX(1.4rem); */
+    .nav-link:hover{
         color: #b10000;
-        font-size: 1.3rem;
-        /* position: absolute; */
+    }
 
+    #menu-list{
+        transition: all 0.7s;
     }
 
     /* home */
