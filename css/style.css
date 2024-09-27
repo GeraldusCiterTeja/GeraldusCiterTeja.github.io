@@ -132,20 +132,18 @@ article, aside{
 }
 
 .about .content{
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .about aside img{
     width: 100%;
     max-width: 300px;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .about article{
     width: 50%;
     text-align: left;
     justify-content: right;
-
 }
 
 /* project */
