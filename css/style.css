@@ -9,6 +9,11 @@ html{
     box-sizing: border-box;
 }
 
+body{
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+}
+
 /* header */
 header{
     width: 100%;
@@ -68,9 +73,10 @@ h3{
     font-size: 1.5rem;
 }
 
-p{
+p, strong{
     font-size: 1.2rem;
-    font-family: Verdana, sans-serif;
+    font-family: sans-serif;
+    margin-bottom: 1rem;
 }
 
 /* setting body */
