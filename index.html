@@ -106,10 +106,10 @@
                     <p>Terima kasih telah mengunjungi portofolio saya. Jika Anda tertarik untuk berkolaborasi, memiliki pertanyaan, atau ingin mendiskusikan peluang potensial, jangan ragu untuk menghubungi saya <i class="bi bi-emoji-smile-fill"></i></p>
                 </article>
                 <aside>
-                    <form>
+                    <form method="post" action="https://formsubmit.co/duateja@gmail.com">
                         <label for="username">Username</label>
              
-                        <input type="text" id="username" name="username" placeholder="Masukan nama anda">
+                        <input type="text" id="username" name="username" placeholder="Masukan nama anda" required>
                        
                         <label for="email">Email</label>
                  
@@ -118,6 +118,10 @@
                         <label for="message">Message</label>
 
                         <textarea id="message" name="message" rows="3" placeholder="Tulis pesan anda" required></textarea>
+
+                        <input type="hidden" name="_next" value="https://geraldusciterteja.github.io/thank-page/">
+
+                        <input type="hidden" name="_captcha" value="false">
 
                         <button type="submit">Submit</button>
                     </form>                    
