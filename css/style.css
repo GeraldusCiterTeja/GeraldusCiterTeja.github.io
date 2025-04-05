@@ -465,8 +465,8 @@ footer a{
         position:absolute;
         width: 100%;
         left: 0;
-        margin-top: 19.5rem;
-        padding-bottom: 1rem;
+        margin-top: 24rem;
+        padding: 1rem;
         align-items: center;
         flex-direction: column;
         background-color: #F0EBE3;
@@ -483,6 +483,7 @@ footer a{
     }    
 
     nav li a{
+
         font-size: 1.2rem;
     }
 
@@ -491,15 +492,19 @@ footer a{
     }
 
     #menu-list{
-        transition: all 0.7s;
+        transition: all 0.9s;
     }
 
     /* home */
+    section{
+        padding: 7rem 2rem 0;
+    }
 
     .about article{
         width: 100%;
         text-align: center;
         justify-content: center;
+        text-align: justify;
     }
 
     .about article p{
@@ -512,8 +517,9 @@ footer a{
         text-align: center;
         width: 100%;
     }
-    .skills article p{
+    .skills article p, strong{
         font-size: 1rem;
+        text-align: justify;
     }
 
     /* contact */
@@ -575,6 +581,10 @@ footer a{
         margin-top: 20.4rem;
     }
 
+    section{
+        padding: 1rem;
+    }
+
     .home{
         padding-bottom: 1rem;
     }
@@ -609,24 +619,25 @@ footer a{
     }
 
     .contact form{
-        width: 15rem;
+        width: 20rem;
     }
 
+    /* footer */
     footer{
         flex-wrap: wrap;
         padding: 1rem 0;
+        gap: 0;
     }
 
     footer .content{
         width: 100%;
-        gap: 1rem;
+        gap: 0rem;
         margin-bottom: 0;
     }
 
     footer aside{
-        margin-top: 0;
+        margin-top: 1rem;
         width: 100%;
         padding-bottom: 1rem;
     }
-
 }
